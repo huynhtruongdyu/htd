@@ -1,0 +1,62 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  padding: 0.5rem;
+}
+.topNavbar {
+  flex: 1;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: inherit;
+  gap: 0.5rem;
+  width: 100%;
+
+  overflow-y: scroll;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.topNavbar::-webkit-scrollbar {
+  display: none;
+}
+
+.bottomNavbar {
+  min-height: fit-content;
+  display: flex;
+  flex-direction: inherit;
+  gap: 0.5rem;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+/*
+.navItem {
+  width: 100%;
+  aspect-ratio: 1/1;
+
+  border-radius: 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+.navItem > small {
+  font-size: 75%;
+}
+
+.navItem:hover,
+.navItem.active {
+  background-color: var(--background-active);
+}
+.navItem.active {
+  opacity: 1;
+}
+
+.navItem.active > small {
+  display: none;
+} */
