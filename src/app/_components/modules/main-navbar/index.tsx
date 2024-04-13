@@ -1,8 +1,6 @@
-import { useRouter } from "next/navigation";
-import { useCallback, useState } from "react";
+import { DEFAULT_FONT_SIZE } from "@/config/icons.config";
+import { FaRegUser, FaUser } from "react-icons/fa";
 import {
-  IoHelpCircle,
-  IoHelpCircleOutline,
   IoHome,
   IoHomeOutline,
   IoLibrary,
@@ -26,8 +24,8 @@ const MainNavbar = () => {
         <NavItem
           to={"/"}
           name="Home"
-          icon={<IoHomeOutline />}
-          iconActive={<IoHome />}
+          icon={<IoHomeOutline size={DEFAULT_FONT_SIZE} />}
+          iconActive={<IoHome size={DEFAULT_FONT_SIZE} />}
           key={0}
         />
       </div>
@@ -37,16 +35,15 @@ const MainNavbar = () => {
         <NavItem
           to={"/library"}
           name="Library"
-          icon={<IoLibraryOutline />}
-          iconActive={<IoLibrary />}
+          icon={<IoLibraryOutline size={DEFAULT_FONT_SIZE} />}
+          iconActive={<IoLibrary size={DEFAULT_FONT_SIZE} />}
           key={1}
         />
         <NavItem
-          to={"/help"}
-          name="Help"
-          // active={isActiveTab(ENavbarItem.Help)}
-          icon={<IoHelpCircleOutline />}
-          iconActive={<IoHelpCircle />}
+          to={"/about"}
+          name="About"
+          icon={<FaRegUser size={DEFAULT_FONT_SIZE} />}
+          iconActive={<FaUser size={DEFAULT_FONT_SIZE} />}
           key={2}
         />
       </div>

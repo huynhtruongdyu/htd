@@ -67,8 +67,10 @@ nav {
 article {
   flex: 1;
   background-color: var(--background-sub);
-  border-top-left-radius: 1%;
+  border-top-left-radius: 0.5rem;
   padding: 1rem;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 *[role="button"] {
