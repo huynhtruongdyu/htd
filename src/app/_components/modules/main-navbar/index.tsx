@@ -8,15 +8,20 @@ import {
 } from "react-icons/io5";
 import NavItem from "./nav-item";
 import "./styles.css";
+import {
+  AiFillAppstore,
+  AiOutlineAppstore,
+  AiTwotoneAppstore,
+} from "react-icons/ai";
 
 export enum ENavbarItem {
   Home,
+  Apps,
   Library,
-  Help,
+  About,
 }
 
 const MainNavbar = () => {
-  const activeIconSize = "1.2rem";
   return (
     <div className={"navbar"}>
       {/* TOP BAR */}
@@ -26,7 +31,14 @@ const MainNavbar = () => {
           name="Home"
           icon={<IoHomeOutline size={DEFAULT_FONT_SIZE} />}
           iconActive={<IoHome size={DEFAULT_FONT_SIZE} />}
-          key={0}
+          key={ENavbarItem.Home}
+        />
+        <NavItem
+          to={"/apps"}
+          name="Apps"
+          icon={<AiOutlineAppstore size={DEFAULT_FONT_SIZE} />}
+          iconActive={<AiOutlineAppstore size={DEFAULT_FONT_SIZE} />}
+          key={ENavbarItem.Apps}
         />
       </div>
 
@@ -37,14 +49,14 @@ const MainNavbar = () => {
           name="Library"
           icon={<IoLibraryOutline size={DEFAULT_FONT_SIZE} />}
           iconActive={<IoLibrary size={DEFAULT_FONT_SIZE} />}
-          key={1}
+          key={ENavbarItem.Library}
         />
         <NavItem
           to={"/about"}
           name="About"
           icon={<FaRegUser size={DEFAULT_FONT_SIZE} />}
           iconActive={<FaUser size={DEFAULT_FONT_SIZE} />}
-          key={2}
+          key={ENavbarItem.About}
         />
       </div>
     </div>

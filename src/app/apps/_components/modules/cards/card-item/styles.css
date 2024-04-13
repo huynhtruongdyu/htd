@@ -1,0 +1,18 @@
+:root {
+  --background-color: #323232;
+  --border-color: #3a3a3a;
+}
+.card-tem {
+  height: 100px;
+  width: 100%;
+  background-color: var(--background-color);
+  border-radius: 0.5rem;
+  border: 0.5px solid var(--border-color);
+  display: grid;
+}
+.card-tem:hover {
+  cursor: pointer;
+  translate: 2px -2px;
+  transition: all ease 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
