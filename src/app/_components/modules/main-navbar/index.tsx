@@ -1,4 +1,3 @@
-"use client";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import {
@@ -19,63 +18,36 @@ export enum ENavbarItem {
 }
 
 const MainNavbar = () => {
-  const router = useRouter();
-
-  const [activeTab, setActiveTab] = useState(ENavbarItem.Home);
-
-  const isActiveTab = useCallback(
-    (key: ENavbarItem) => key == activeTab,
-    [activeTab]
-  );
-
-  const onSetActiveTabHome = useCallback(() => {
-    setActiveTab(ENavbarItem.Home);
-    router.push("/");
-  }, [router]);
-
-  const onSetActiveTabLibrary = useCallback(() => {
-    setActiveTab(ENavbarItem.Library);
-    router.push("library");
-  }, [router]);
-
-  const onSetActiveTabHelp = useCallback(() => {
-    setActiveTab(ENavbarItem.Help);
-    router.push("help");
-  }, [router]);
-
   const activeIconSize = "1.2rem";
-
   return (
     <div className={"navbar"}>
       {/* TOP BAR */}
       <div className={"topNavbar"}>
         <NavItem
+          to={"/"}
           name="Home"
-          active={isActiveTab(ENavbarItem.Home)}
           icon={<IoHomeOutline />}
-          iconActive={<IoHome size={activeIconSize} />}
+          iconActive={<IoHome />}
           key={0}
-          onClick={onSetActiveTabHome}
         />
       </div>
 
       {/* BOTTOM BAR */}
       <div className={"bottomNavbar"}>
         <NavItem
+          to={"/library"}
           name="Library"
-          active={isActiveTab(ENavbarItem.Library)}
           icon={<IoLibraryOutline />}
-          iconActive={<IoLibrary size={activeIconSize} />}
-          key={0}
-          onClick={onSetActiveTabLibrary}
+          iconActive={<IoLibrary />}
+          key={1}
         />
         <NavItem
+          to={"/help"}
           name="Help"
-          active={isActiveTab(ENavbarItem.Help)}
+          // active={isActiveTab(ENavbarItem.Help)}
           icon={<IoHelpCircleOutline />}
-          iconActive={<IoHelpCircle size={activeIconSize} />}
-          key={0}
-          onClick={onSetActiveTabHelp}
+          iconActive={<IoHelpCircle />}
+          key={2}
         />
       </div>
     </div>

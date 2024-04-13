@@ -7,7 +7,7 @@
 
   --foreground-rgb: 0, 0, 0;
   --background: #f3f3f3;
-  --background-sub: #23242e;
+  --background-sub: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,7 +25,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: all ease 0.3s;
+  transition: all ease 0.1s;
+  scroll-behavior: smooth;
 }
 
 html,
